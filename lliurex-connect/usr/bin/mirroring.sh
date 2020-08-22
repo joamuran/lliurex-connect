@@ -33,7 +33,7 @@ esac
 
 case $? in
     0)        
-     nw0.21 --url="${DATA}:8888";
+     nw0.21 --url="${DATA}:6868";
 
         ;;
     -1)

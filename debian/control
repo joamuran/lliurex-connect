@@ -1,0 +1,16 @@
+Source: lliurex-connect
+Section: misc
+Priority: optional
+Maintainer: LliureX Team <lliurex@gva.es>
+Build-Depends: debhelper (>=10), python-support, python3-iniparse, llxsrchelper,python3-appdirs,python3-poinstaller
+Standards-Version: 4.1.2
+Homepage: http://lliurex.net
+X-Python-Version: >= 2.6
+
+Package: lliurex-connect
+Architecture: all
+Depends: nwjs0.21, ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, python3-iniparse, python3-appdirs
+Description: Communicate with your tablet
+ Tools to connect Android tablets
+ with a LliureX Desktop. Requires
+ manual installation of Google Chrome.

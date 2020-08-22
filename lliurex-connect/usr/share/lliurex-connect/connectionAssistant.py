@@ -67,17 +67,17 @@ class connectionAssistant:
         
         # Item 1: Enable/Disable wifi
         
-        self.ManagedConnection=self.checkNWManaged();
-        if (self.ManagedConnection):
-            item1Text=_("Disable Wireless Management");
-            icon="img/wifion.png";
-        else:
-            item1Text=_("Enable Wireless Management");
-            icon="img/wifioff.png";
+        #self.ManagedConnection=self.checkNWManaged();
+        #if (self.ManagedConnection):
+        #    item1Text=_("Disable Wireless Management");
+        #    icon="img/wifion.png";
+        #else:
+        #    item1Text=_("Enable Wireless Management");
+        #    icon="img/wifioff.png";
+        #
         
-        
-        item1=self.createStaticMenuOption(icon, item1Text, self.cbSetupWifi);
-        menu.append(item1)
+        #item1=self.createStaticMenuOption(icon, item1Text, self.cbSetupWifi);
+        #menu.append(item1)
         
         item2=self.createStaticMenuOption('img/mirror.png', _("Mirror Android on this computer"), self.cbMirror);
         menu.append(item2)
@@ -100,9 +100,9 @@ class connectionAssistant:
     def cbSetupWifi(self, widget):
         self.ManagedConnection=self.checkNWManaged()
         if (self.ManagedConnection):
-            command='gksudo ManageWifi.sh false';
+            command='pkexec ManageWifi.sh false';
         else:
-            command='gksudo ManageWifi.sh true';
+            command='pkexec ManageWifi.sh true';
     
         proc = subprocess.Popen([command], shell=True, stdout=subprocess.PIPE)
         (out, err) = proc.communicate()
