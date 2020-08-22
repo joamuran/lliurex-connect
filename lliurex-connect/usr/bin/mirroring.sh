@@ -10,21 +10,21 @@ case $LANG in
     DATA=`zenity --forms --title="Activar mirroring de Android" \
         --text="Introduzca la dirección proporcionada\n por la aplicación Screen Cast." \
         --separator="*" \
-        --add-entry="http://dirección:8888"`;
+        --add-entry="http://dirección:6868"`;
     ;;
     
     "ca"*)
     DATA=`zenity --forms --title="Activeu el mirroring d'Android" \
         --text="Introduïu l'adreça proporcionada \n per l'aplicació Screen Cast." \
         --separator="*" \
-        --add-entry="http://adreça:8888"`;
+        --add-entry="http://adreça:6868"`;
         ;;
         
     *)
     DATA=`zenity --forms --title="Activate Android  Mirroring" \
         --text="Insert address given by Screen Cast App" \
         --separator="*" \
-        --add-entry="http://address:8888"`;
+        --add-entry="http://address:6868"`;
     ;;
     
 esac
